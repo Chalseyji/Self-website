@@ -1,0 +1,253 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: #E0E0E0;
+    overflow-x: hidden;
+}
+
+header {
+    background-color: #1F1F1F;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    position: relative; /* Ensure header is positioned for absolute elements */
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.logo {
+    color: #FF4081;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a, .nav-links button {
+    text-decoration: none;
+    color: #E0E0E0;
+    font-weight: bold;
+    padding: 10px 20px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover, .nav-links button:hover {
+    color: #FF4081;
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: #E0E0E0;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #1F1F1F;
+    }
+
+    .nav-links li {
+        text-align: center;
+    }
+
+    .burger {
+        display: block;
+    }
+}
+
+#gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-image {
+    width: 100%;
+    border-radius: 15px;
+    transition: transform 0.3s, filter 0.3s;
+}
+
+.gallery-image:hover {
+    transform: scale(1.05);
+    filter: brightness(0.8);
+}
+
+.download-button {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    background-color: #FF4081;
+    color: #FFFFFF;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+}
+
+.download-button:hover {
+    opacity: 1;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #1F1F1F;
+}
+
+#loginSection {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #333333;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    transition: right 0.3s ease;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Animation styles */
+.animated-header-elements {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1; /* Send to background */
+}
+
+.animated-header-elements svg {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    fill: rgba(255, 255, 255, 0.5);
+    animation: float 5s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-20px) rotate(15deg);
+    }
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+}
+
+/* Specific animation delays and positions for each SVG */
+.svg-camera {
+    top: 10%;
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.svg-light {
+    top: 20%;
+    right: 20%;
+    animation-delay: 1s;
+}
+
+.svg-speaker {
+    top: 15%;
+    left: 70%;
+    animation-delay: 2s;
+}
+
+.animated-header-elements {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1; /* Send to background */
+}
+
+.animated-header-elements svg {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    fill: rgba(255, 255, 255, 0.5);
+    animation: float 5s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-20px) rotate(15deg);
+    }
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+}
+
+.svg-camera {
+    top: 10%;
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.svg-light {
+    top: 20%;
+    right: 20%;
+    animation-delay: 1s;
+}
+
+.svg-speaker {
+    top: 15%;
+    left: 70%;
+    animation-delay: 2s;
+}
+.svg-element {
+    fill: #FF4081; /* Fill color */
+    margin-right: 10px; /* Spacing between elements */
+}
